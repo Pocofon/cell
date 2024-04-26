@@ -40,6 +40,12 @@ function createTable() {
     }
   }
   addGreenCell();
+  setTimeout(
+    () => {
+      deleteGreenCell();
+    },
+     200
+  );
 }
 
 function addGreenCell() {
@@ -58,8 +64,6 @@ function addGreenCell() {
 
   
 }
-
-table.addEventListener('click',deleteGreenCell);
 
 function deleteGreenCell(){
   let i = 0;
@@ -129,24 +133,3 @@ resetBtn.addEventListener("click", function () {
   addGreenCell();
   table.addEventListener('click',deleteGreenCell);
 });
-
-// zmey();
-
-// function zmey() {
-//   for (let i = 0; i < 10; i++) {
-//     const dyd = i*10;
-//     if (i % 2 == 1) {
-//       for (let j = 0; j < 10; j++) {
-//         const td = document.querySelector(`[id="${dyd+j}"]`);
-//         setTimeout(()=>{        
-//           td.classList.add("green");
-//       },1000);
-//       }
-//     } else {
-//       for (let jk = 9; jk >= 0; jk--) {
-//         const td = document.querySelector(`[id="${dyd+jk}"]`);
-//         td.classList.add("green");
-//       }
-//     }
-//   }
-// }
